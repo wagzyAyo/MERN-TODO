@@ -21,9 +21,9 @@ function Input(props){
 
     return (
         <div>
-            <input type="text" name="task" placeholder="Enter task" onChange={handleTask} value={task}/>
-                <Fab color="primary" aria-label="add">
-                    <AddIcon onClick={handleSubmit}/>
+            <input type="text" name="task" placeholder="Enter task" onChange={handleTask} value={task} />
+                <Fab color="primary" aria-label="add" onClick={handleSubmit}>
+                    <AddIcon />
                 </Fab>
         </div>
     )
