@@ -11,12 +11,18 @@ const pointer = {
     return (
         <div style={{
             width: '300px',
-            height: '30px',
+            minHeight: '30px',
             border: "none",
+            borderRadius: "5px",
             backgroundColor: "#fff",
             color: "#000",
-        }} className='mt-4 mb-2 '>
-            <p className='flex justify-around items-center'>{props.text} <EditIcon style={pointer} /> <DeleteIcon style={pointer}  onClick={()=>{props.deleteTask(props.id)}}/></p> 
+        }} className='mt-4 mb-4 '>
+            <p className='flex justify-around items-center'>{props.text} 
+            <div>
+                <EditIcon style={pointer} /> 
+                <DeleteIcon style={pointer}  onClick={()=>{props.deleteTask(props.id)}}/>
+            </div>
+            </p> 
         </div>
     )
 }
