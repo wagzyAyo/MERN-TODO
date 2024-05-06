@@ -7,15 +7,26 @@ function App(){
 
  function handleAddTask(task){
   setTaskList(prevTasks => [...prevTasks, task]);
+
+
+
  }
   
 
-  return <div className="h-screen flex  justify-center mt-6">
+  return <div className="h-screen grid mt-6 justify-center" >
+    <div style={{
+    background: "#000",
+    width: "400px",
+    height: "auto",
+    borderRadius: "30px",
+    color: "#fff"
+  }}>
     <Input addTask={handleAddTask}/>
 
     {taskList.map((task, index) => (
       <List key={index} text={task} id={index}/>
     ))}
+    </div>
   </div>
 }
 
