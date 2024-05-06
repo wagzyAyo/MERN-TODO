@@ -10,7 +10,7 @@ function App(){
  }
   
 
-  return <div>
+  return <div className="h-screen flex  justify-center mt-6">
     <Input addTask={handleAddTask}/>
 
     {taskList.map((task, index) => (
