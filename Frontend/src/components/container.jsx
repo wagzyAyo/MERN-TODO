@@ -18,10 +18,9 @@ const pointer = {
             color: "#000",
         }} className='mt-4 mb-4 '>
             <p className='flex justify-around items-center'>{props.text} 
-            <div>
+            
                 <EditIcon style={pointer} /> 
                 <DeleteIcon style={pointer}  onClick={()=>{props.deleteTask(props.id)}}/>
-            </div>
             </p> 
         </div>
     )
@@ -30,7 +29,7 @@ const pointer = {
 Container.propTypes = {
     text: PropTypes.string.isRequired,
     deleteTask: PropTypes.func.isRequired,
-    id: PropTypes.number.isRequired
+    id: PropTypes.number.isRequired,
 }
 
 export default Container

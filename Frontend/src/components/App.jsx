@@ -9,6 +9,7 @@ function App(){
   setTaskList(prevTasks => [...prevTasks, task]);
  }
 
+
  function handleDelete(id){
   setTaskList((prevList) =>{
     return prevList.filter((task, index) =>{
@@ -17,7 +18,6 @@ function App(){
   })
  }
   
-
   return <div className="mt-6 grid justify-center" >
     <div style={{
     background: "#000",
@@ -29,7 +29,7 @@ function App(){
     <Input addTask={handleAddTask}/>
 
     {taskList.map((task, index) => (
-      <List key={index} text={task} id={index} deleteTask= {handleDelete}/>
+      <List key={index} text={task} id={index} deleteTask= {handleDelete} />
     ))}
     </div>
   </div>
