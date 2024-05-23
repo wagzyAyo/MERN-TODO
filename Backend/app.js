@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-require("dotenv").config()
+require("dotenv").config();
 
 
 
@@ -33,7 +33,7 @@ app.get('/', (req, res)=>{
 });
 
 app.post('/', (req, res)=>{
-    newTask = req.body.task;
+    const newTask = req.body.task;
     try{
         const saveTask = new task({
             task: newTask
